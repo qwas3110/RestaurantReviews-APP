@@ -9,8 +9,10 @@ var markers = []
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap(); // added
+  serviceWorker();
   fetchNeighborhoods();
   fetchCuisines();
+  handleRestaurantFilters();
 });
 
 /**
@@ -160,10 +162,13 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  // 添加注释
+  image.alt  = `Photo of ${restaurant.name} Restaurant`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('h1');
+  // 将h1 修改 h3
+  const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -208,4 +213,61 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
+
+
+
+
+// registered service worker
+
+function serviceWorker() {
+  if (!navigator.serviceWorker) return;
+
+  navigator.serviceWorker.register('/sw.js')
+      .then(() => console.log('离线设备注册成功！'))
+      .catch(() => console.log('离线设备注册失败！'))
+
+}
+
+
+/**
+ * 在过滤器菜单处理程序上添加单击事件侦听器
+ */
+handleRestaurantFilters = () => {
+  const handler = document.querySelector('.filter-options-handler');
+  handler.addEventListener('click', toggleFilters);
+}
+
+/**
+ * 添加适当的处理类以显示/隐藏过滤器
+ */
+toggleFilters = (e) => {
+  const filters = document.querySelectorAll('.filter-options select');
+  for (let filter of filters) {
+    filter.classList.toggle('show');
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

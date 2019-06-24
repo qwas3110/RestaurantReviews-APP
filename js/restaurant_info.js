@@ -87,7 +87,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
-  image.className = 'restaurant-img'
+  image.className = 'restaurant-img';
+  //设置注释
+  image.alt = `Photo of ${restaurant.name} Restaurant`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
@@ -148,16 +150,26 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  // 创建元素
+  const header = document.createElement('header');
   const name = document.createElement('p');
+  // 设置类
+  name.className = 'name';
   name.innerHTML = review.name;
   li.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
+  // 设置类名
+  date.className = 'date';
   li.appendChild(date);
+  // 添加元素
+  li.appendChild(header);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  // 设置类名
+  rating.className = 'rating';
   li.appendChild(rating);
 
   const comments = document.createElement('p');
