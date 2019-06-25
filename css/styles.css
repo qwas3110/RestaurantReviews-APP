@@ -184,11 +184,23 @@ nav h1 a {
 
 
 
+
 .filter-options h2 {
   color: white;
   font-size: 2rem;
   line-height: 2.8rem;
   margin: 0 2rem 0 2rem;
+}
+
+
+.filter-options .filter-options-handler {
+  display: none;
+  padding: 0.5rem 1rem;
+  content: "\2630";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
 .filter-options select {
@@ -202,6 +214,11 @@ nav h1 a {
   padding: 0 10px;
   width: 20rem;
 }
+
+.filter-options select.show {
+  display: inline-block;
+}
+
 
 /* ====================== 餐馆列表 ====================== */
 
