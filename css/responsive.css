@@ -1,0 +1,94 @@
+/*!* Desktops *!*/
+/*@media screen and (min-width: 961px) {*/
+/*    #breadcrumb {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+
+/*!* Tablets - Landscape Mode *!*/
+/*@media screen and (max-width: 960px) {*/
+/*    #breadcrumb,*/
+/*    #map-container,*/
+/*    #restaurant-container,*/
+/*    #reviews-container {*/
+/*        !* padding-left: 2%;*/
+/*        padding-right: 2%; *!*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    #restaurant-cuisine {*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .inside #map-container {*/
+/*        position: relative;*/
+/*        top: 113px;*/
+/*        left: 0;*/
+/*        width: 100%;*/
+/*        height: 350px;*/
+/*        padding: 0;*/
+/*    }*/
+
+/*    .inside #footer {*/
+/*        width: 96%;*/
+/*        padding: 2em 2%;*/
+/*    }*/
+
+/*    #reviews-list li {*/
+/*        width: 96%;*/
+/*        margin: 4% 0;*/
+/*        padding: 2%;*/
+/*        border: none;*/
+/*        box-shadow: 0px 2px 4px 1px #ddd;*/
+/*    }*/
+
+/*    #restaurants-list li {*/
+/*        width: 27.333%;*/
+/*        margin: 1%;*/
+/*    }*/
+/*}*/
+
+/*!* Mobile devices - Landscape Mode / Tablet devices - Portrait Mode *!*/
+/*@media screen and (max-width: 720px) {*/
+/*    #restaurants-list li {*/
+/*        width: 44%;*/
+/*        margin: 1%;*/
+/*    }*/
+/*}*/
+
+/*!* Mobile devices - Portrait Mode *!*/
+/*@media screen and (max-width: 420px) {*/
+/*    #restaurants-list li {*/
+/*        width: 100%;*/
+/*        margin-top: 3%;*/
+/*        min-height: 0;*/
+/*    }*/
+
+/*    #restaurants-list .restaurant-img {*/
+/*        min-height: 0;*/
+/*    }*/
+/*}*/
+
+/*!* Secondary Breakpoints - Content Oriented *!*/
+/*@media screen and (max-width: 580px) {*/
+
+/*    .filter-options .filter-options-handler {*/
+/*        display: inline-block;*/
+/*    }*/
+
+/*    .filter-options h2 {*/
+/*        margin: 0;*/
+/*    }*/
+
+/*    .filter-options select {*/
+/*        display: none;*/
+/*        width: 96%;*/
+/*        margin: 1% 2%;*/
+/*        padding: 0 2%;*/
+/*    }*/
+
+/*    .filter-options select:last-of-type {*/
+/*        margin-bottom: 2%;*/
+/*    }*/
+/*}*/

@@ -1,5 +1,6 @@
-/*!* ====================== CSS重置 ====================== *!*/
 
+
+/*  CSS 重置  */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -49,340 +50,304 @@ table {
   border-spacing: 0;
 }
 
-/*!* ====================== 全局 ====================== *!*/
+/* ====================== 全局样式 ====================== */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html {
   font-size: 10px;
-  padding: 2rem;
 }
 
-body,
-td,
-th,
-p {
+body,td,th,p{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #333;
   line-height: 1.5;
 }
-
 body {
   background-color: #fdfdfd;
   margin: 0;
-  position: relative;
+  position:relative;
 }
-
-ul,
-li {
-  color: orange;
+ul, li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  color: #333;
 }
-
-a img {
-  border: none 0 #fff;
-  text-transform: none;
-}
-
 a {
-  text-decoration: none;
   color: orange;
+  text-decoration: none;
 }
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+a:hover, a:focus {
+  color: #3397db;
+  text-decoration: none;
+}
+a img{
+  border: none 0 #fff;
+}
+h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 2rem;
 }
+
 
 #main-content {
   background-color: #f3f3f3;
   min-height: 100%;
 }
-
 #footer {
   background-color: #444;
   color: #aaa;
-  font-size: 1.4rem;
+  font-size: 1rem;
   letter-spacing: 1px;
-  padding: 2.5rem 0;
+  padding: 2.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
-
-/*!* ====================== 头部导航栏 ====================== *!*/
+/*   header 头部    */
 
 nav {
   width: 100%;
-  background-color: #252831;
+  height: 8rem;
+  background-color:#252831;
   text-align: center;
 }
 
 nav h1 {
   margin: auto;
-
+  padding: 2rem 0 1rem 0;
 }
 
 nav h1 a {
-  display: inline-block;
-  padding: 2rem 1rem;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 200;
   letter-spacing: 1rem;
-  text-transform: uppercase;
 }
 
-/*  商店详情页面 标题 */
+/* 餐厅详情页面 头部 #breadcrumb */
 
 #breadcrumb {
-  padding: 1rem 4rem;
+  display: flex;
+  padding: 1rem 4rem 1.6rem;
   list-style: none;
   background-color: #eee;
   font-size: 1.7rem;
   margin: 0;
-  width: calc(50% - 8rem);
+  /*width: calc(50% - 8rem);*/
+  width: 50%;
 }
 
 #breadcrumb li {
-  display: inline;
-  font-size: 1.6rem;
+  display: inline-block;
 }
 
 #breadcrumb li+li:before {
-  padding: 0.8rem;
+  padding: 1rem;
   color: black;
-  content: "\005C";
+  content: "/\00a0";
 }
 
 #breadcrumb li a {
   color: #0275d8;
 }
 
-#breadcrumb li  a:hover {
+#breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
 }
 
-/*!* ====================== 地图 ====================== *!*/
+
+/*   地图 #map   */
 
 #map {
-  height: 400px;
   width: 100%;
+  height: 400px;
   background-color: #ccc;
 }
 
 /* ====================== 选择表单 ====================== */
 
 .filter-options {
-  width: 100%;
-  min-height: 5rem;
-  background-color: #3397DB;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #3397DB;
 }
+
+
 
 .filter-options h2 {
   color: white;
   font-size: 2rem;
-  font-weight: normal;
-  margin: 0 2rem;
-  display: inline-block;
-  line-height: 3rem;
-}
-
-
-.filter-options .filter-options-handler {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  content: "\2630";
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
+  line-height: 2.8rem;
+  margin: 0 2rem 0 2rem;
 }
 
 .filter-options select {
-  display: inline-block;
   background-color: white;
-  border: none;
+  border: 1px solid #fff;
   font-family: Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   height: 3.5rem;
   letter-spacing: 0;
-  margin: 0.8rem 0.2rem;
-  padding: 0 1rem;
+  margin: 1rem;
+  padding: 0 10px;
   width: 20rem;
 }
 
-
-.filter-options select .show {
-  display: inline-block;
-
-  /* 这边后续做隐藏需要修改 */
-}
-
-/* ====================== 餐厅列表 ====================== */
+/* ====================== 餐馆列表 ====================== */
 
 #restaurants-list {
-  /*background-color: #f3f3f3;*/
-  /*list-style: outside none none;*/
-  /*margin: 0;*/
-  /*padding: 1rem 0;*/
-  /*text-align: center;*/
-  /*display: flex;*/
-  /*flex-wrap: wrap;*/
-  /*justify-content: center;*/
-
-  /* 更喜欢用grid */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 1rem;
+  grid-gap: 1rem;
+  justify-items: center;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
   padding: 2rem 0;
   text-align: center;
-
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 1rem;
-  justify-items: center;
 }
 
 #restaurants-list li {
+  border: 1px solid #ccc;
   background-color: #fff;
-  border: 0.2rem solid #ccc;
-  font-family: Arial, sans-serif;
-  margin: 1rem;
-  min-height: 38rem;
-  padding: 0.3rem 2.5rem;
+  font-family: Arial,sans-serif;
+  min-height: 380px;
   text-align: center;
-  width: 27rem;
-  font-size: 1rem;
+  padding: 1rem 2rem;
 }
 
 
+
 #restaurants-list .restaurant-img {
-  /*background-color: #ccc;*/
-  /*display: block;*/
-  /*margin-left: -3rem;*/
-  /*min-height: 24.8rem;*/
-  /*min-width: 123%;*/
-  min-width: 100%;
+  display: block;
   max-width: 100%;
+  min-height: 248px;
+  min-width: 100%;
   margin: 0;
 }
 
 #restaurants-list li h3 {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 1.7rem;
-  font-weight: 200;
+  font-size: 2rem;
   letter-spacing: 0;
   line-height: 1.3;
-  margin: 2rem 0 1rem;
   text-transform: capitalize;
 }
 
+
 #restaurants-list p {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 #restaurants-list li a {
-  background-color: orange;
-  border-bottom: 0.3rem solid #eee;
+  display: inline-block;
   color: #fff;
-  display: block;
-  font-size: 1.3rem;
-  margin: 1.5rem 0 0 ;
   padding: 0.8rem 3rem 1rem;
-  text-align: center;
-  text-decoration: none;
+  margin: 1.5rem 0 0;
+  background-color: orange;
+  border: 3px solid #eee;
   text-transform: uppercase;
 }
 
-/* ====================== 餐厅详情页面 ====================== */
+/*  餐厅详情页面 */
 
 .inside header {
-  /*position: fixed;*/
-  /*top: 0;*/
-  /*width: 100%;*/
-  /*z-index: auto;*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
-  height: 23rem;
-  /*height: 87%;*/
-  /*position: fixed;*/
-  /*right: 0;*/
-  /*top: 8rem;*/
-  /*width: 50%;*/
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 50%;
+  height: 87%;
 }
 
 .inside #map {
   background-color: #ccc;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
-/*.inside #footer {*/
-/*  bottom: 0;*/
-/*  position: absolute;*/
-/*  width: 50%;*/
-/*}*/
+.inside #footer {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+}
+
+#restaurant-container,
+#reviews-container {
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #fff;
+  padding: 14rem 1% 3rem 1%;
+  width: 48%;
+}
 
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 1.5rem 0 3rem;
   text-transform: uppercase;
-  line-height: 1.1;
-  text-align: center;
+  line-height: 2.8rem;
 }
 
-
 #restaurant-img {
+  display: block;
   width: 100%;
-  object-position: center;
-  object-fit: cover;
+  margin: 0 auto;
 }
 
 
 #restaurant-address {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin: 1rem 0;
 }
-
 
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1rem;
   margin: 0 0 2rem;
-  padding: .2rem 0;
+  padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
 }
-#restaurant-container, #reviews-container {
-  border-top: .1rem solid #fff;
-  padding: 2rem 0;
-  width: 100%;
-}
 
 table {
-  font-size: 1.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+table td {
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+}
+
+table tr:nth-child(2n+1) {
+  background-color: white;
 }
 
 #reviews-container {
@@ -390,40 +355,53 @@ table {
 }
 
 
-#reviews-container h2 {
+#reviews-container h2,
+#restaurant-container h2{
   color: #f58500;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-weight: 300;
-  letter-spacing: -.1rem;
-  padding-bottom: 0.13rem;
-  text-align: center;
-  padding-right: 6rem;
+  letter-spacing: -1px;
+  padding-bottom: 1rem;
 }
 
 #reviews-list {
-  margin: auto;
-  width: 80%;
+  margin: 0;
   padding: 0;
 }
 
-#reviews-list li {
+
+#reviews-list li  {
   background-color: #fff;
-  border: .2rem solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 0 3rem;
+  margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 2rem 2rem;
+  padding: 0 20px 20px;
   position: relative;
   width: 85%;
 }
 
+#reviews-list li .name {
+  font-size: 2rem;
+  margin: 0;
+}
+
+
+#reviews-list li .rating {
+  clear: both;
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: orange;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+}
+
 #reviews-list li p {
-  margin: 0 0 1rem;
+  margin: 0 0 10px;
 }
 #restaurant-hours td {
   color: #666;
 }
-
-
-
